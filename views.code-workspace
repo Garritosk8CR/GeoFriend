@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "src\\layout"
+		},
+		{
+			"path": "src\\store"
+		},
+		{
+			"path": "src\\views"
+		},
+		{
+			"path": "src\\components"
+		}
+	]
+}
