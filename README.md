@@ -2,7 +2,7 @@
 
 Social app made with Vue js.
 
-Things I learned:
+## Things I learned:
 - Layout and reusable components made with Vuetify.
 - Routing with Vue-router.
 - Route guards.
