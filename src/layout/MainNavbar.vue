@@ -118,71 +118,66 @@ export default {
                 click: '',
                 pathName: 'gchat',
                 color: 'amber darken-3'
-            },
-            {
-                icon: 'content_copy',
-                text: 'Duplicates',
-                click: '',
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'keyboard_arrow_up',
-                'icon-alt': 'keyboard_arrow_down',
-                text: 'Labels',
-                model: true,
-                children: [{
-                    icon: 'add',
-                    text: 'Create label',
-                    color: 'blue darken-3'
-                }],
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'keyboard_arrow_up',
-                'icon-alt': 'keyboard_arrow_down',
-                text: 'More',
-                model: false,
-                children: [{
-                        text: 'Import'
-                    },
-                    {
-                        text: 'Export'
-                    },
-                    {
-                        text: 'Print'
-                    },
-                    {
-                        text: 'Undo changes'
-                    },
-                    {
-                        text: 'Other contacts'
-                    }
-                ],
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'settings',
-                text: 'Settings',
-                click: '',
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'help',
-                text: 'Help',
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'phonelink',
-                text: 'App downloads',
-                click: '',
-                color: 'blue darken-3'
-            },
-            {
-                icon: 'keyboard',
-                text: 'Go to the old version',
-                click: '',
-                color: 'blue darken-3'
             }
+            // ,
+            // {
+            //     icon: 'keyboard_arrow_up',
+            //     'icon-alt': 'keyboard_arrow_down',
+            //     text: 'Labels',
+            //     model: true,
+            //     children: [{
+            //         icon: 'add',
+            //         text: 'Create label',
+            //         color: 'blue darken-3'
+            //     }],
+            //     color: 'blue darken-3'
+            // },
+            // {
+            //     icon: 'keyboard_arrow_up',
+            //     'icon-alt': 'keyboard_arrow_down',
+            //     text: 'More',
+            //     model: false,
+            //     children: [{
+            //             text: 'Import'
+            //         },
+            //         {
+            //             text: 'Export'
+            //         },
+            //         {
+            //             text: 'Print'
+            //         },
+            //         {
+            //             text: 'Undo changes'
+            //         },
+            //         {
+            //             text: 'Other contacts'
+            //         }
+            //     ],
+            //     color: 'blue darken-3'
+            // },
+            // {
+            //     icon: 'settings',
+            //     text: 'Settings',
+            //     click: '',
+            //     color: 'blue darken-3'
+            // },
+            // {
+            //     icon: 'help',
+            //     text: 'Help',
+            //     color: 'blue darken-3'
+            // },
+            // {
+            //     icon: 'phonelink',
+            //     text: 'App downloads',
+            //     click: '',
+            //     color: 'blue darken-3'
+            // },
+            // {
+            //     icon: 'keyboard',
+            //     text: 'Go to the old version',
+            //     click: '',
+            //     color: 'blue darken-3'
+            // }
 
         ]
     }),
