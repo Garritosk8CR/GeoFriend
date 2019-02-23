@@ -11,18 +11,19 @@
                 </v-container>
             </v-img>
             <v-card-title>
-                <v-container align-start fluid>
-                    <v-layout align-center justify-center fill-height row>
-                        <h3 class="headline"> User Details</h3>
-                    </v-layout>
-                    <div>
-                        <v-divider></v-divider>
-                        <br/> <br/>
-                        <span>Email: {{userToShow.email}}</span><br>
-                        <span>Alias: {{userToShow.alias}}</span>
-                    </div>
-                </v-container>
+                <v-layout align-start justify-start column >
+                    <h3 class="headline"> User Details</h3>
+                </v-layout>
             </v-card-title>
+            <v-divider></v-divider>
+            <v-container>
+                <v-layout align-start justify-start column fill-height>
+                    <h5 body-2>Email</h5>
+                    <span body-1>{{userToShow.email}}</span>
+                    <h5 body-2>Alias</h5>
+                    <span body-1>{{userToShow.alias}}</span>
+                </v-layout>
+            </v-container>
         </v-card>
     </v-flex>
 </template>
