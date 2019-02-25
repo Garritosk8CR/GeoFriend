@@ -22,6 +22,9 @@ const getters = {
     },
     authError(state) {
         return state.authError
+    },
+    getUserId(state) {
+        return state.userId
     }
 }
 

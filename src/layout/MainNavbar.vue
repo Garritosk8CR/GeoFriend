@@ -5,7 +5,7 @@
                 <v-layout v-if="user" :key="user.alias"
                 :style="userMenuStyle"
                 row align-start justify-center fill-height>
-                    <v-flex xs8>
+                    <v-flex xs8 @click="goToProfile">
                         <br />
                         <h4 class="title" :style="{color: '#FAFAFA'}">
                             &nbsp; {{ user.alias }}
@@ -86,7 +86,7 @@
     </div>
 </template>
 <script>
-import {mapGetters, mapActions} from 'vuex'
+import {mapGetters, mapActions, mapMutations} from 'vuex'
 export default {
     data: () => ({
         dialog: false,
@@ -187,25 +187,40 @@ export default {
     computed: {
         ...mapGetters([
             'isAuthenticated',
-            'user'
+            'user',
+            'getLogedUser',
+            'getUserId'
         ]),
         isLogedIn() {
-
             this.isLoged = this.$store.getters.isAuthenticated
             if (this.isLoged) {
-
+                if(!this.logedUser) {
+                    this.logedUser = this.getLogedUser
+                }
             }
             return this.isLoged
         }
     },
     methods: {
         ...mapActions([
-            'logout'
+            'logout',
+            'getUserById'
+        ]),
+        ...mapMutations([
+            'setUserToShow'
         ]),
         onLogout() {
             this.logedUser = null
             this.isLoged = false
             this.logout()
+        },
+        goToProfile() {
+            this.getUserById(this.getLogedUser.id).then(user => {
+                this.setUserToShow(user)
+                this.$router.push({name: 'profile'})
+            })
+
+
         }
     },
     created() {
