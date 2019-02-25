@@ -88,16 +88,18 @@
 <script>
 import {mapGetters, mapActions, mapMutations} from 'vuex'
 export default {
+    props: {
+        source: String,
+        image: {
+            type: String,
+            default: require('@/assets/img/usernameBackground.jpeg')
+        }
+    },
     data: () => ({
         dialog: false,
         drawer: null,
         isLoged: false,
         logedUser: null,
-        userMenuStyle: {
-            overflow: 'hidden',
-            'background-image': 'url(https://cdn-images-1.medium.com/max/1600/1*l3wujEgEKOecwVzf_dqVrQ.jpeg)',
-            'background-size': 'cover'
-        },
         items: [{
                 icon: 'dashboard',
                 text: 'Home',
@@ -181,9 +183,6 @@ export default {
 
         ]
     }),
-    props: {
-        source: String
-    },
     computed: {
         ...mapGetters([
             'isAuthenticated',
@@ -199,6 +198,13 @@ export default {
                 }
             }
             return this.isLoged
+        },
+        userMenuStyle() {
+            return {
+                overflow: 'hidden',
+                'background': `url(${this.image})`,
+                'background-size': 'cover'
+            }
         }
     },
     methods: {
