@@ -13,7 +13,6 @@
                         <br />
                         <br />
                     </v-flex>
-
                 </v-layout>
                 <template v-for="item in items">
                     <v-layout v-if="item.heading" :key="item.heading" row align-center>
@@ -225,12 +224,7 @@ export default {
                 this.setUserToShow(user)
                 this.$router.push({name: 'profile'})
             })
-
-
         }
-    },
-    created() {
-
     }
 }
 </script>
