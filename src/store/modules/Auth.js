@@ -83,7 +83,7 @@ const actions = {
             }
             commit('clearError', null)
             commit('setLogedUser', { ...logedUser, ...payload.user })
-            Router.push({name: 'dashboard'})
+            Router.push({name: 'home'})
 
         })
         .catch(error => {
