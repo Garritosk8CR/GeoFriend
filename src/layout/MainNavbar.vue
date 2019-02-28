@@ -34,7 +34,7 @@
                                 </v-list-tile-title>
                             </v-list-tile-content>
                         </v-list-tile>
-                        <v-list-tile v-for="(child, i) in item.children" :key="i" @click="">
+                        <v-list-tile v-for="(child, i) in item.children" :key="i" >
                             <v-list-tile-action v-if="child.icon">
                                 <v-icon :color="child.color">{{ child.icon }}</v-icon>
                             </v-list-tile-action>
