@@ -1,39 +1,40 @@
 <template>
     <v-container fluid fill-height grid-list-xl>
         <v-layout align-center justify-center row wrap>
-            <v-flex xs8 sm4 md3 align-self-center d-flex>
-                <div class="item elevation-5 text-center green darken-2">
-                    <v-icon color="grey lighten-2" size="100">map</v-icon>
-                    <h6 class="headline " :style="{'color': '#E0E0E0'}">Gmap</h6>
-                </div>
-            </v-flex>
-            <v-flex xs8 sm4 md3 align-self-center d-flex>
-                <div class="item elevation-5 text-center amber darken-3">
-                    <v-icon color="grey lighten-2" size="105">public</v-icon>
-                    <h6 class="headline " :style="{'color': '#E0E0E0'}">Global Chat</h6>
-                </div>
-            </v-flex>
-            <v-flex xs8 sm4 md3 align-self-center d-flex>
-                <div class="item elevation-5 text-center light-blue darken-2">
-                    <v-icon color="grey lighten-2" size="105">face</v-icon>
-                    <h6 class="headline " :style="{'color': '#E0E0E0'}">Profile</h6>
-                </div>
-            </v-flex>
+            <template v-for="item in items">
+                <v-flex xs8 sm4 md3 align-self-center d-flex :key="item.headline">
+                    <home-item  :pIcon="item.icon" :pHeadline="item.headline" :pColor="item.color"></home-item>
+                </v-flex>
+            </template>
         </v-layout>
     </v-container>
 </template>
 
 <script>
-
+import Item from './components/Home/Item'
 export default {
     components: {
-
+        'home-item':Item
     },
-    data() {
-        return {
-
-        }
-    },
+    data: () => ({
+        items: [
+            {
+                icon: 'map',
+                headline: 'Gmap',
+                color: 'green darken-2'
+            },
+            {
+                icon: 'public',
+                headline: 'Global Chat',
+                color: 'amber darken-3'
+            },
+            {
+                icon: 'face',
+                headline: 'Profile',
+                color: 'light-blue darken-2'
+            }
+        ]
+    }),
     computed: {
 
     },
