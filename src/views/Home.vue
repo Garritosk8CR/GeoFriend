@@ -3,7 +3,13 @@
         <v-layout align-center justify-center row wrap>
             <template v-for="item in items">
                 <v-flex xs8 sm4 md3 align-self-center d-flex :key="item.headline">
-                    <home-item  :pIcon="item.icon" :pHeadline="item.headline" :pColor="item.color"></home-item>
+                    <home-item
+                        :pIcon="item.icon"
+                        :pHeadline="item.headline"
+                        :pColor="item.color"
+                        :prouteName="item.routeName"
+                        :p_isProfile="item.isProfile"
+                    ></home-item>
                 </v-flex>
             </template>
         </v-layout>
@@ -21,17 +27,23 @@ export default {
             {
                 icon: 'map',
                 headline: 'Gmap',
-                color: 'green darken-2'
+                color: 'green darken-2',
+                routeName: 'gmap',
+                isProfile: false
             },
             {
                 icon: 'public',
                 headline: 'Global Chat',
-                color: 'amber darken-3'
+                color: 'amber darken-3',
+                routeName: 'gchat',
+                isProfile: false
             },
             {
                 icon: 'face',
                 headline: 'Profile',
-                color: 'light-blue darken-2'
+                color: 'light-blue darken-2',
+                routeName: 'profile',
+                isProfile: true
             }
         ]
     }),
