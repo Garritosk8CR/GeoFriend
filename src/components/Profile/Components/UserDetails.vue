@@ -18,9 +18,11 @@
             <v-divider></v-divider>
             <v-container>
                 <v-layout align-start justify-start column fill-height>
-                    <h5 body-2>Email</h5>
+                    <h5 body-2>Email:</h5>
                     <span body-1>{{userToShow.email}}</span>
-                    <h5 body-2>Alias</h5>
+                    <h5 body-2>Name:</h5>
+                    <span body-1>{{userToShow.name}}</span>
+                    <h5 body-2>Alias:</h5>
                     <span body-1>{{userToShow.alias}}</span>
                 </v-layout>
             </v-container>
@@ -40,6 +42,9 @@ export default {
         ...mapGetters([
             'userToShow'
         ])
+    },
+    created() {
+        console.log(this.userToShow )
     }
 }
 
