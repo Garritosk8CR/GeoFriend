@@ -2,10 +2,8 @@
     <v-container fluid fill-height grid-list-md >
         <v-layout align-center justify-center row wrap >
             <template v-for="item in items">
-<<<<<<< HEAD
                 <v-flex xs12 sm4 md2 align-self-center d-block :key="item.headline" :style="{'height': '22%'}" >
                     <home-item  :pIcon="item.icon" :pHeadline="item.headline" :pColor="item.color"></home-item>
-=======
                 <v-flex xs8 sm4 md3 align-self-center d-flex :key="item.headline">
                     <home-item
                         :pIcon="item.icon"
@@ -14,7 +12,6 @@
                         :prouteName="item.routeName"
                         :p_isProfile="item.isProfile"
                     ></home-item>
->>>>>>> 4a420e5b9f965336512298ae10432029f750e17f
                 </v-flex>
             </template>
         </v-layout>

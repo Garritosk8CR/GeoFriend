@@ -1,9 +1,6 @@
 <template>
-<<<<<<< HEAD
     <div :class="divClass + pColor" :style="{'height': '100%', 'padding-top': '9%'}">
-=======
     <div :class="divClass + pColor" @click="goTo">
->>>>>>> 4a420e5b9f965336512298ae10432029f750e17f
         <v-icon :color="iconColor" size="100">{{pIcon}}</v-icon>
         <h6 class="headline " :style="{'color': grey}">{{pHeadline}}</h6>
     </div>
