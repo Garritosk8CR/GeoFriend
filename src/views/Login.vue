@@ -14,7 +14,7 @@
                 <v-card-actions>
                     <v-chip v-if="authError" label outline color="red">{{authError}}</v-chip>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary" @click="login">Login</v-btn>
+                    <v-btn color="primary" @click.enter="login">Login</v-btn>
                 </v-card-actions>
             </v-card>
         </v-flex>
