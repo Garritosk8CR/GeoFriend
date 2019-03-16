@@ -1,8 +1,8 @@
 <template>
-    <v-container fluid fill-height grid-list-xl>
-        <v-layout align-center justify-center row wrap>
+    <v-container fluid fill-height grid-list-md >
+        <v-layout align-center justify-center row wrap >
             <template v-for="item in items">
-                <v-flex xs8 sm4 md3 align-self-center d-flex :key="item.headline">
+                <v-flex xs12 sm4 md2 align-self-center d-block :key="item.headline" :style="{'height': '22%'}" >
                     <home-item  :pIcon="item.icon" :pHeadline="item.headline" :pColor="item.color"></home-item>
                 </v-flex>
             </template>

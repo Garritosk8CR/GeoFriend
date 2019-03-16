@@ -1,5 +1,5 @@
 <template>
-    <div :class="divClass + pColor">
+    <div :class="divClass + pColor" :style="{'height': '100%', 'padding-top': '9%'}">
         <v-icon :color="iconColor" size="100">{{pIcon}}</v-icon>
         <h6 class="headline " :style="{'color': grey}">{{pHeadline}}</h6>
     </div>
